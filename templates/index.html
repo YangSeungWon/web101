@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>WEB101 강의 실습</title>
+    </head>
+    <body>
+        <h1>WEB101 강의 실습</h1>
+        <p>WEB101 강의는 실습과 함께 진행됩니다.</p>
+        <ul>
+            {% for item in navigation %}
+            <li>{{ item.slide }}번 슬라이드: <a href="{{ item.href }}">{{ item.caption }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
