@@ -1,0 +1,31 @@
+{% if adjacent %}
+    <br><br><br>
+    <!-- 이 아래의 코드는 목차를 통해 편리하게 이동하기 위해서 추가된 코드입니다. -->
+    <!-- 무시하셔도 됩니다. -->
+    <hr>
+    <h4>목차</h4>
+    <p>
+        이전: 
+        {% if adjacent.prev %}
+            <a href={{ adjacent.prev.href }}>{{ adjacent.prev.caption }}</a>
+        {% else %}
+            [시작]
+        {% endif %}
+    </p>
+    <p>
+        현재:
+        {% if adjacent.cur %}
+            <a href={{ adjacent.cur.href }}>{{ adjacent.cur.caption }}</a>
+        {% else %}
+            [에러]
+        {% endif %}
+    </p>
+    <p>
+        다음: 
+        {% if adjacent.next %}
+            <a href={{ adjacent.next.href }}>{{ adjacent.next.caption }}</a>
+        {% else %}
+            [끝]
+        {% endif %}
+    </p>
+{% endif %}
