@@ -7,7 +7,7 @@
     <p>
         이전: 
         {% if adjacent.prev %}
-            <a href={{ adjacent.prev.href }}>{{ adjacent.prev.caption }}</a>
+            {{ adjacent.prev.slide }}번 슬라이드: <a href={{ adjacent.prev.href }}>{{ adjacent.prev.caption }}</a>
         {% else %}
             [시작]
         {% endif %}
@@ -15,7 +15,7 @@
     <p>
         현재:
         {% if adjacent.cur %}
-            <a href={{ adjacent.cur.href }}>{{ adjacent.cur.caption }}</a>
+            {{ adjacent.cur.slide }}번 슬라이드: <a href={{ adjacent.cur.href }}>{{ adjacent.cur.caption }}</a>
         {% else %}
             [에러]
         {% endif %}
@@ -23,7 +23,7 @@
     <p>
         다음: 
         {% if adjacent.next %}
-            <a href={{ adjacent.next.href }}>{{ adjacent.next.caption }}</a>
+          {{ adjacent.next.slide }}번 슬라이드: <a href={{ adjacent.next.href }}>{{ adjacent.next.caption }}</a>
         {% else %}
             [끝]
         {% endif %}
